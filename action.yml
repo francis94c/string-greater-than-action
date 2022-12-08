@@ -1,0 +1,30 @@
+name: String Greater Than Action
+author: Francis Ilechukwu
+description: Check if one string is greater or equal to another
+inputs:
+  string1:
+    description: String 1
+    required: true
+  string2:
+    description: String 2
+    required: true
+  failOnGreater:
+    description: Fail if string1 > string2.
+    required: false
+    default: false
+  failOnLesser:
+    description: Fail if string1 < string2.
+    required: false
+    default: false
+  failOnEqual:
+    description: Fail if string1 = string2.
+    required: false
+    default: false
+
+outputs:
+  result:
+    description: 0 if string1 = string2; 1 if string1 > string1; -1 if string1 < string2;
+
+runs:
+  using: "node16"
+  main: "index.js"
