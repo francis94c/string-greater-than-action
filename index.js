@@ -9,8 +9,12 @@ const main = async () => {
 
         if (string1 > string2) {
             result = 1;
+            console.log("string1 > string2");
         } else if (string1 < string2) {
             result = -1;
+            console.log("string1 < string2");
+        } else {
+            console.log("string1 = string2");
         }
 
         core.setOutput("result", result);

@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: old Version greater than new version
+    name: Old version greater than new version
     steps:
       - name: Check Version
         uses: francis94c/string-greater-than-action@master
