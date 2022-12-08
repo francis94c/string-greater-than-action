@@ -2828,23 +2828,32 @@ const main = async () => {
 
         if (string1 > string2) {
             result = 1;
+            core.info("string1 > string2");
         } else if (string1 < string2) {
             result = -1;
+            core.info("string1 < string2");
+        } else {
+            core.info("string1 = string2");
         }
 
         core.setOutput("result", result);
 
         if (result == 0 && core.getBooleanInput("failOnEqual")) {
+            core.warning("Failing because string1 = string2");
             core.setFailed("string1 == string2");
         } else if (result == 1 && core.getBooleanInput("failOnGreater")) {
+            core.warning("Failing because string1 > string2");
             core.setFailed("string1 > string2");
         } else if (result == -1 && core.getBooleanInput("failOnLesser")) {
+            core.warning("Failing because string1 < string2");
             core.setFailed("string1 < string2");
         }
     } catch (error) {
         core.setFailed(error.message);
     }
 }
+
+main();
 })();
 
 module.exports = __webpack_exports__;
