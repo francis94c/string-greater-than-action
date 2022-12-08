@@ -1,8 +1,9 @@
 name: String Greater Than Action
 author: Francis Ilechukwu
 description: Check if one string is greater or equal to another
-icon: check-circle
-color: orange
+branding:
+  icon: check-circle
+  color: orange
 inputs:
   string1:
     description: String 1
