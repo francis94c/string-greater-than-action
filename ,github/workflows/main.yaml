@@ -1,0 +1,18 @@
+name: String Greater Than Action Test
+
+on: 
+  push:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: old Version greater than new version
+    steps:
+      - name: Check Version
+        uses: francis94c/string-greater-than-action@master
+        with:
+          string1: v1.2.3+40
+          string2: v2.4.5+80
+          failOnLesser: true
+          failOnEqual: true
