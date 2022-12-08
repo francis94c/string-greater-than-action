@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Old version greater than new version
     steps:
-      - name: Check Version
+      - name: String 1 > String 2
         uses: francis94c/string-greater-than-action@master
         with:
-          string1: v2.4.5+80
-          string2: v1.2.3+40
+          string1: v1.2.3+40
+          string2: v2.4.5+80
           failOnLesser: true
           failOnEqual: true
