@@ -7,6 +7,8 @@ const main = async () => {
 
         let result = 0;
 
+        console.log("Hello");
+
         if (string1 > string2) {
             result = 1;
             core.info("string1 > string2");
